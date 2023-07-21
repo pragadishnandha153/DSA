@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[]={1,0,1,0,0,1,0};
+    int n=7;
+    int zc=0,oc=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==0){
+            zc++;
+        }
+        else
+            oc++;
+    }
+    
+    for(int i=0;i<zc;i++){
+        arr[zc]=0;
+    }
+    for(int i=zc;i<n;i++)
+        arr[oc]=1;
+        
+    for(int i=0;i<zc;i++){
+        cout<<arr[zc]<<" ";
+    }
+    for(int i=zc;i<n;i++){
+        cout<<arr[oc]<<" ";
+    }
+
+    return 0;
+}
